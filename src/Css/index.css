@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'Slab';
+  src: local('Slab'), url(../Assets/fonts/RobotoSlab-Regular.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Slab";
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-personalinfo{
+  margin-top: 10%;
+}
+
+nav {
+  justify-content: space-around !important;
+}
+
+.nav-container {
+  font-family: "Slab" !important;
+}
+
+.second-title, .personalinfo-title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 50px;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.principal-text-line2 {
+  margin-left: 10%;
+}
+
+.principal-text-line3 {
+  margin-left: 20%;
+}
+
+.principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  width: 100%;
+  height: 200px;
+}
+
+.principal-1, .principal-2  {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 40px;
+  width: 50%;
+  height: 100%;
+}
+
+.principal-2 {
+  align-items: flex-start;
+}
+
+.principal-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: #29C1E1;
+  border-radius: 50px;
+  font-size: 20px;
+  width: 50%;
+  height: 100%;
+}
+
+.bit-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50px;
+
+}
+
+.text-personalinfo {
+  text-align: center;
+}
+
+/* Palette color  */
+
+/* 
+3A4555
+D4D4D4
+EDECEC
+29C1E1 
+*/
