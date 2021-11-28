@@ -1,5 +1,5 @@
 import "../Css/index.css";
-import Medog from "../Assets/img/bitmoji-20211123014412-removebg-preview.png";
+import Mehey from "../Assets/img/bitmoji-20211123014412-removebg-preview.png";
 import Nav from "./Navbar";
 import PersonalInfo from "./PersonalInfo";
 
@@ -14,7 +14,7 @@ function Home() {
           <p className="principal-text-line3"> Alex </p>
         </div>
         <div className="principal-2">
-          <img src={Medog} className="bit-img" />
+          <img src={Mehey} className="bit-img" />
         </div>
       </div>
       <div className="second-title">Full Stack Web Developer</div>

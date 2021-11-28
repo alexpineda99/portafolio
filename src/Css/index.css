@@ -82,6 +82,13 @@ p {
   height: 100%;
 }
 
+.frontend-skills-div, .backend-skills-div, .additional-skills-div {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  text-align: center;
+  color: #000;
+}
+
 .bit-img {
   width: 200px;
   height: 200px;
@@ -91,6 +98,86 @@ p {
 
 .text-personalinfo {
   text-align: center;
+}
+
+.skill-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  background: #29C1E1;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.skills {
+  margin: 2%;
+}
+
+.main-skill-div {
+  background: #fff;
+  height: 172px;
+  padding: 40px;
+  border-radius: 50px;
+}
+
+.title-skills-div {
+  text-align: center;
+  fill: white; 
+  stroke: #000; 
+  stroke-width: 3px; 
+}
+
+/* cards */
+
+.src-Card-styles-module__card--1s_T3 {
+  flex-flow: unset !important;
+}
+
+.src-UserCard-UserCardBody-styles-module__user-card-body--1Ox5y {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 !important;
+  padding-top: 0 !important;
+}
+
+.src-UserCard-UserCardBody-styles-module__user-card-body--1Ox5y .src-UserCard-UserCardBody-styles-module__user-card-name--x7M0V {
+  margin-bottom: 0 !important;
+}
+
+@media screen and (max-width: 425px) {
+  .skill-div{
+    flex-direction: column;
+  }
+
+  .second-title, .personalinfo-title {
+    font-size: 20px;
+  }
+
+  .principal-1 {
+    font-size: 30px;
+  }
+
+  .principal-2 {
+    justify-content: center;
+  }
+
+  .bit-img {
+    width: 70%;
+    height: 200px;
+    border-radius: 50px;
+}
+
+.principal {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.principal-info{
+  width: 100%;
+}
 }
 
 /* Palette color  */
