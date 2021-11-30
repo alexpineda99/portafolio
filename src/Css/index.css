@@ -19,6 +19,10 @@ body {
   margin-top: 10%;
 }
 
+.letra-principal {
+width: 100%;
+height: 50px;
+}
 nav {
   justify-content: space-around !important;
 }
@@ -111,6 +115,10 @@ p {
   padding-bottom: 2%;
 }
 
+.overlay-container-show  {
+  background-color: #fff !important;
+}
+
 .skills {
   margin: 2%;
 }
@@ -178,6 +186,11 @@ p {
 .principal-info{
   width: 100%;
 }
+
+.letra-principal {
+  width: 50%;
+}
+
 }
 
 /* Palette color  */
