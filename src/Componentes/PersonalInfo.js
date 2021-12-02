@@ -22,7 +22,7 @@ function PersonalInfo() {
       </div>
       <div className="skill-div">
         <div className="frontend-skills-div">
-          <img src="https://img.icons8.com/ios/50/000000/design--v1.png" />
+          <img src="https://img.icons8.com/ios/50/000000/design--v1.png" alt="Monitor image" />
           <div className="main-skill-div">
             <span className="skills-title"> Frontend Skills </span>
             <div className="skills">
@@ -37,7 +37,7 @@ function PersonalInfo() {
           </div>
         </div>
         <div className="backend-skills-div">
-          <img src="https://img.icons8.com/ios/50/000000/database.png" />
+          <img src="https://img.icons8.com/ios/50/000000/database.png" alt="Database image" />
           <div className="main-skill-div">
             {" "}
             <span className="skills-title"> Backend Skills </span>
@@ -49,7 +49,7 @@ function PersonalInfo() {
           </div>
         </div>
         <div className="additional-skills-div">
-          <img src="https://img.icons8.com/ios/50/000000/add-bookmark.png" />
+          <img src="https://img.icons8.com/ios/50/000000/add-bookmark.png" alt="Additional image" />
           <div className="main-skill-div">
             <span className="skills-title"> Additional Skills </span>
             <div className="skills">
