@@ -4,7 +4,7 @@ import Swinguapage from "../Assets/img/work/swinguapage.PNG"
 
 function Experience() {
   return (
-    <div className="">
+    <div className="experience-main-div">
       <div className="second-title">My work experience</div>
       <div className="work-experience-div">
         <div className="experience-div">

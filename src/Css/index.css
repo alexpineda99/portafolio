@@ -143,6 +143,10 @@ p {
   padding-bottom: 2%;
 }
 
+.experience-div > a {
+  margin-bottom: 3%;
+}
+
 .overlay-container-show  {
   background-color: #fff !important;
 }
@@ -181,6 +185,24 @@ p {
 
 .src-UserCard-UserCardBody-styles-module__user-card-body--1Ox5y .src-UserCard-UserCardBody-styles-module__user-card-name--x7M0V {
   margin-bottom: 0 !important;
+}
+
+.achievements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: #29C1E1 1px solid;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 2%;
+}
+
+.achieve-div {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ border: #29C1E1 1px solid;
 }
 
 @media screen and (max-width: 768px) {

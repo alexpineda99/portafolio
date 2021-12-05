@@ -3,6 +3,7 @@ import Mehey from "../Assets/img/bitmoji-20211123014412-removebg-preview.png";
 import Nav from "./Navbar";
 import PersonalInfo from "./PersonalInfo";
 import Experience from "./Experience";
+import Achievements from "./Achievements";
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function Home() {
       <div className="second-title">Full Stack Web Developer</div>
       <PersonalInfo/>
       <Experience/>
+      <Achievements/>
     </div>
   );
 }
