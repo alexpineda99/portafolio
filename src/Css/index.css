@@ -23,6 +23,7 @@ body {
 width: 100%;
 height: 50px;
 }
+
 nav {
   justify-content: space-around !important;
 }
@@ -62,7 +63,7 @@ p {
 
 .principal-1, .principal-2  {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
   font-size: 40px;
@@ -71,15 +72,17 @@ p {
 }
 
 .work-experience-div {
+  width: 100%;
+  margin-top: 5%;
   display: flex;
   justify-content: space-evenly;
-  margin-top: 5%;
-  width: 100%;
-  height: 100%;
+  flex-wrap: wrap;
 }
 
 .experience-div {
-  width: 20%;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
 }
 
 .principal-2 {
@@ -121,8 +124,9 @@ p {
   width: 200px;
   height: 200px;
   border-radius: 50px;
-
 }
+
+
 
 .text-personalinfo {
   text-align: center;
@@ -179,6 +183,18 @@ p {
   margin-bottom: 0 !important;
 }
 
+@media screen and (max-width: 768px) {
+  
+  .experience-img:hover {
+    transform: none;
+  }
+
+  .experience-div {
+    width: 51%;
+    margin-bottom: 5%;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .skill-div{
     flex-direction: column;
@@ -213,6 +229,10 @@ p {
 
 .letra-principal {
   width: 25%;
+}
+
+.experience-div {
+  width: 100%;
 }
 
 }
