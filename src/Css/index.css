@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Slab';
-  src: local('Slab'), url(../Assets/fonts/RobotoSlab-Regular.ttf);
+  font-family: "Slab";
+  src: local("Slab"), url(../Assets/fonts/RobotoSlab-Regular.ttf);
 }
 body {
   margin: 0;
@@ -15,13 +15,13 @@ body {
   width: 100%;
 }
 
-.main-personalinfo{
+.main-personalinfo {
   margin-top: 10%;
 }
 
 .letra-principal {
-width: 100%;
-height: 50px;
+  width: 100%;
+  height: 50px;
 }
 
 nav {
@@ -32,7 +32,8 @@ nav {
   font-family: "Slab" !important;
 }
 
-.second-title, .personalinfo-title {
+.second-title,
+.personalinfo-title {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -61,7 +62,8 @@ p {
   height: 200px;
 }
 
-.principal-1, .principal-2  {
+.principal-1,
+.principal-2 {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -94,14 +96,16 @@ p {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: #29C1E1;
+  background: #29c1e1;
   border-radius: 50px;
   font-size: 20px;
   width: 50%;
   height: 100%;
 }
 
-.frontend-skills-div, .backend-skills-div, .additional-skills-div {
+.frontend-skills-div,
+.backend-skills-div,
+.additional-skills-div {
   margin-top: 1%;
   margin-bottom: 1%;
   text-align: center;
@@ -109,7 +113,7 @@ p {
 }
 
 .experience-img {
-  width:100%;
+  width: 100%;
   height: 200px;
   border-radius: 5%;
   transition: ease-in-out 0.2s;
@@ -117,7 +121,6 @@ p {
 
 .experience-img:hover {
   transform: scale(120%);
-
 }
 
 .bit-img {
@@ -125,8 +128,6 @@ p {
   height: 200px;
   border-radius: 50px;
 }
-
-
 
 .text-personalinfo {
   text-align: center;
@@ -138,7 +139,7 @@ p {
   justify-content: space-evenly;
   width: 100%;
   height: 100%;
-  background: #29C1E1;
+  background: #29c1e1;
   padding-top: 2%;
   padding-bottom: 2%;
 }
@@ -147,7 +148,7 @@ p {
   margin-bottom: 3%;
 }
 
-.overlay-container-show  {
+.overlay-container-show {
   background-color: #fff !important;
 }
 
@@ -164,9 +165,9 @@ p {
 
 .title-skills-div {
   text-align: center;
-  fill: white; 
-  stroke: #000; 
-  stroke-width: 3px; 
+  fill: white;
+  stroke: #000;
+  stroke-width: 3px;
 }
 
 /* cards */
@@ -183,15 +184,16 @@ p {
   padding-top: 0 !important;
 }
 
-.src-UserCard-UserCardBody-styles-module__user-card-body--1Ox5y .src-UserCard-UserCardBody-styles-module__user-card-name--x7M0V {
+.src-UserCard-UserCardBody-styles-module__user-card-body--1Ox5y
+  .src-UserCard-UserCardBody-styles-module__user-card-name--x7M0V {
   margin-bottom: 0 !important;
 }
 
 .achievements {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  border: #29C1E1 1px solid;
+  /* justify-content: center; */
+  /* border: #29c1e1 1px solid; */
   width: 50%;
   margin-left: 25%;
   margin-right: 25%;
@@ -199,14 +201,37 @@ p {
 }
 
 .achieve-div {
- display: flex;
- flex-direction: column;
- align-items: center;
- border: #29C1E1 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: #29c1e1 3px solid;
+  border-radius: 15px;
+  margin-bottom: 5%;
+}
+
+.tittle-achieve {
+  font-size: 20px;
+}
+
+.footer {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+  height: 4em;
+  width: 100%;
+  background-color: #222222;
+  color: white;
+  text-align: center;
+}
+
+.footer-item {
+  width: 20%;
+  background-color: #222222;
 }
 
 @media screen and (max-width: 768px) {
-  
   .experience-img:hover {
     transform: none;
   }
@@ -218,11 +243,12 @@ p {
 }
 
 @media screen and (max-width: 425px) {
-  .skill-div{
+  .skill-div {
     flex-direction: column;
   }
 
-  .second-title, .personalinfo-title {
+  .second-title,
+  .personalinfo-title {
     font-size: 20px;
   }
 
@@ -238,25 +264,38 @@ p {
     width: 70%;
     height: 200px;
     border-radius: 50px;
-}
+  }
 
-.principal {
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
+  .principal {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
 
-.principal-info{
-  width: 100%;
-}
+  .principal-info {
+    width: 100%;
+  }
 
-.letra-principal {
-  width: 25%;
-}
+  .letra-principal {
+    width: 25%;
+  }
 
-.experience-div {
-  width: 100%;
-}
+  .experience-div {
+    width: 100%;
+  }
 
+  .achievements {
+    width: 99%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-item {
+    width: 100%;
+}
 }
 
 /* Palette color  */

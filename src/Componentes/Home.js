@@ -4,6 +4,7 @@ import Nav from "./Navbar";
 import PersonalInfo from "./PersonalInfo";
 import Experience from "./Experience";
 import Achievements from "./Achievements";
+import Footer from "./Footer";
 
 function Home() {
   return (
@@ -23,6 +24,7 @@ function Home() {
       <PersonalInfo/>
       <Experience/>
       <Achievements/>
+      <Footer/>
     </div>
   );
 }
