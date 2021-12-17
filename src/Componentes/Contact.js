@@ -50,7 +50,7 @@ function Contact() {
         </div>
         <h4>Purpose</h4>
         <div className="contact-textarea"> 
-        <textarea rows="4" cols="50"></textarea>
+        <textarea rows="10" cols="20"></textarea>
         </div>
         <div className="send-button-form">
         <AwesomeButton type="primary">Send</AwesomeButton>

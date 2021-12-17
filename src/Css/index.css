@@ -268,7 +268,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 70%;
+  width: 100%;
 }
 
 h4 {
@@ -335,6 +335,10 @@ textarea {
     width: 51%;
     margin-bottom: 5%;
   }
+
+  .contact-field > ._1twP4, ._2eBPT {
+    width: 100%;
+}
 }
 
 @media screen and (max-width: 425px) {
@@ -390,10 +394,6 @@ textarea {
 
   .footer-item {
     width: 100%;
-}
-
-.contact-field {
-  justify-content: center;
 }
 
 .aws-btn--visible {
