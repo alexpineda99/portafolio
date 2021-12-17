@@ -286,6 +286,17 @@ textarea {
   resize: none;
 }
 
+.send-button-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 100%;
+}
+
+.aws-btn--visible {
+  width: 30% !important;
+}
 
 .footer {
   display: flex;
@@ -310,9 +321,9 @@ textarea {
 .footer-item-socials {
   display: flex;
   justify-content: space-between;
-  width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 @media screen and (max-width: 768px) {
@@ -379,6 +390,14 @@ textarea {
 
   .footer-item {
     width: 100%;
+}
+
+.contact-field {
+  justify-content: center;
+}
+
+.aws-btn--visible {
+  width: 50% !important;
 }
 }
 

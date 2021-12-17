@@ -1,5 +1,7 @@
 import react, { useState } from "react";
 import { FormField } from "react-form-input-fields";
+import { AwesomeButton } from "react-awesome-button";
+import "react-awesome-button/dist/styles.css";
 import "react-form-input-fields/dist/index.css";
 import "../Css/index.css";
 
@@ -50,7 +52,9 @@ function Contact() {
         <div className="contact-textarea"> 
         <textarea rows="4" cols="50"></textarea>
         </div>
-        <input type="submit" value="Send"/>
+        <div className="send-button-form">
+        <AwesomeButton type="primary">Send</AwesomeButton>
+        </div>
         </form>
       </div>
       
