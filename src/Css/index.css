@@ -219,7 +219,7 @@ p {
   flex-direction: column;
   font-size: 20px;
   margin-top: 5%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   width: 50%;
   margin-right: 25%;
   margin-left: 25%;
@@ -239,12 +239,53 @@ p {
   margin-top: 3%;
 }
 
-/* 
-3A4555
-D4D4D4
-EDECEC
-29C1E1 
-*/
+.contact-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.contact-fields-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+._1twP4, ._2eBPT {
+  width: 40%;
+}
+
+.contact-textarea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+}
+
+h4 {
+  left: 0;
+  width: 100%;
+  top: 9px;
+  color: #aaa;
+  transition: 0.3s;
+  z-index: 1;
+  letter-spacing: 0.5px;
+  font: unset;
+}
+
+textarea {
+  resize: none;
+}
+
 
 .footer {
   display: flex;
@@ -260,8 +301,18 @@ EDECEC
 }
 
 .footer-item {
+  display: flex;
+  flex-direction: column;
   width: 20%;
   background-color: #222222;
+}
+
+.footer-item-socials {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 @media screen and (max-width: 768px) {
@@ -309,7 +360,7 @@ EDECEC
   }
 
   .letra-principal {
-    width: 25%;
+    width: 20%;
   }
 
   .experience-div {
