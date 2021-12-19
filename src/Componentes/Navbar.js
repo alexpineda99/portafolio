@@ -39,8 +39,8 @@ function Nav() {
 
   return (
     <div>
-      {/* <Navbar fontColor="#000" backgroundColor="#fff" brand={<img onClick={scrollToTestDiv} className="letra-principal" src={Letra} />} links={[{text: "Contact me", link: "contact"}]} /> */}
-      <Navbar links={[{text: "Contact me", link: "#contact"}]}/>
+      <Navbar fontColor="#000" backgroundColor="#fff" brand={<img className="letra-principal" src={Letra} />} links={[{text: "Contact me", link: "contact"}]} />
+      {/* <Navbar links={[{text: "Contact me", link: "#contact"}]}/> */}
       <Routes>
         <Route exact path="/" component={Home} />
         <Route path="/#contact" component={Contact} />
