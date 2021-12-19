@@ -62,7 +62,7 @@ function Contact() {
     }
     else {
 
-    axios.post("http://localhost:3001/sendemail", data)
+    axios.post("https://serverportafolio.cleverapps.io/sendemail", data)
 
     .then(res => {
       console.log(res.data)
