@@ -37,6 +37,10 @@ nav {
   font-family: "Slab" !important;
 }
 
+.overlay-container-hidden {
+  background-color: #fff !important;
+}
+
 .second-title,
 .personalinfo-title {
   display: flex;

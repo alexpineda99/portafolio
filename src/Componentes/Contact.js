@@ -84,15 +84,15 @@ function Contact() {
   }
   //
 
-  useEffect(() => {
+  // useEffect(() => {
 
 
     
-  }, [])
+  // }, [])
 
   return (
-    <div className="contact-div">
-        <h1 id="contact">Contact me!</h1>
+    <div id="contact" className="contact-div">
+        <h1>Contact me!</h1>
         {loading ?
         <div className="main-loading">
         <SpinnerCircular size={100} thickness={100} speed={100} color="rgba(21, 193, 225, 1)" secondaryColor="rgba(255, 255, 255, 1)" />
