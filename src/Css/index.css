@@ -2,6 +2,11 @@
   font-family: "Slab";
   src: local("Slab"), url(../Assets/fonts/RobotoSlab-Regular.ttf);
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -298,6 +303,43 @@ textarea {
   width: 30% !important;
 }
 
+/* Loading screen */
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.main-loading {
+  background-color: #000000;
+  opacity: 50%;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.msg-div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: #bb2124;
+  margin-top: 5%;
+}
+
 .footer {
   display: flex;
   position: relative;
@@ -338,6 +380,10 @@ textarea {
 
   .contact-field > ._1twP4, ._2eBPT {
     width: 100%;
+}
+
+.contact-fields-row > ._1twP4, ._2eBPT {
+  width: 40%;
 }
 }
 
