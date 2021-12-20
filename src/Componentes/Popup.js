@@ -17,7 +17,7 @@ const Popup = () => {
       <Modal open={open} onClose={onCloseModal} center>
         <h2>¡Email sent to Alex!</h2>
         <h2>Thanks for contact me!</h2>
-        <div className="principal-2">
+        <div className="higfive-div">
           <img src={Highfive} alt="Greetings" className="bit-img" />
         </div>
       </Modal>
