@@ -378,14 +378,6 @@ textarea {
   margin-right: 20%;
 }
 
-@media screen and (max-width: 980px) {
-
-  .letra-principal {
-    width: 20%;
-  }
-
-}
-
 @media screen and (max-width: 768px) {
   .experience-img:hover {
     transform: none;
