@@ -378,7 +378,7 @@ textarea {
   margin-right: 20%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
   .experience-img:hover {
     transform: none;
   }
