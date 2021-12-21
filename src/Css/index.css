@@ -379,6 +379,14 @@ textarea {
 }
 
 @media screen and (max-width: 780px) {
+
+  .letra-principal {
+    width: 20%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
   .experience-img:hover {
     transform: none;
   }
