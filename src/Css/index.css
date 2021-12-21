@@ -378,7 +378,7 @@ textarea {
   margin-right: 20%;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 980px) {
 
   .letra-principal {
     width: 20%;
