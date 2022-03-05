@@ -86,11 +86,13 @@ function Contact() {
   }
   //
 
-  // useEffect(() => {
+  useEffect(() => {
 
+    if (isSuccesful) {
+      setSuccesful(false)
+    }
 
-
-  // }, [])
+  }, [])
 
   return (
     <div id="contact" className="contact-div">
