@@ -1,6 +1,29 @@
+import React, { useEffect, useState } from "react";
 import "../Css/index.css";
 
 function PersonalInfo() {
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [classSkillDiv, setClassSkillDiv] = useState(null)
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+    console.log(position)
+    // if (position >= 250) {
+    //   setClassSkillDiv("open-div");
+    // }else if (position <= 250) {
+    //   setClassSkillDiv(null);
+    // }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="main-personalinfo">
       <span className="personalinfo-title"> Who i am?</span>
@@ -20,7 +43,7 @@ function PersonalInfo() {
       <div className="title-skills-div">
         <h1> Some skills and development experience </h1>
       </div>
-      <div className="skill-div">
+      <div className={`skill-div ${classSkillDiv}`}>
         <div className="frontend-skills-div">
           <img src="https://img.icons8.com/ios/50/000000/design--v1.png" alt="Monitor image" />
           <div className="main-skill-div">

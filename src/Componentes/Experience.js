@@ -1,6 +1,6 @@
 import "../Css/index.css";
-import Fortnitepage from "../Assets/img/work/fortnitepage.PNG"
-import Swinguapage from "../Assets/img/work/swinguapage.PNG"
+import Fortnitepage from "../Assets/img/work/fortnitepage.PNG";
+import Swinguapage from "../Assets/img/work/swinguapage.PNG";
 
 function Experience() {
   return (

@@ -15,7 +15,7 @@ function Contact() {
   let [body, setBody] = useState("");
   let [msg, setmsg] = useState("");
   let [isSuccesful, setSuccesful] = useState(false);
-  let [loading, setLoading] = useState(false);
+  let [loading, setLoading] = useState(true);
 
   const onChangeHandler = event => {
     setBody(event.target.value);
@@ -61,8 +61,8 @@ function Contact() {
       setLoading(false);
     }
     else {
-
-    axios.post("https://serverportafolio.cleverapps.io/sendemail", data)
+      // https://serverportafolio.cleverapps.io/sendemail
+    axios.post("http://localhost:3001/sendemail", data)
 
     .then(res => {
       console.log(res.data)
