@@ -25,7 +25,6 @@ function Contact() {
 
   //
   const sendemail = () => {
-    setSuccesful(false);
     setLoading(true);
     let regLetter = /^[a-zA-Z\s]*$/; // regular expression only letters
     let regEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/; // regular expression email
@@ -75,6 +74,7 @@ function Contact() {
           setmsg("");
           setLoading(false);
           setSuccesful(true);
+          setSuccesful(false);
           navigate("/");
           
         })
