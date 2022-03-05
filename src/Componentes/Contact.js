@@ -74,7 +74,6 @@ function Contact() {
           setmsg("");
           setLoading(false);
           setSuccesful(true);
-          setSuccesful(false);
           navigate("/");
           
         })
