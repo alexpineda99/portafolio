@@ -15,12 +15,12 @@ function Contact() {
   let [body, setBody] = useState("");
   let [msg, setmsg] = useState("");
   let [isSuccesful, setSuccesful] = useState(false);
-  let [loading, setLoading] = useState(true);
+  let [loading, setLoading] = useState(false);
 
   const onChangeHandler = event => {
     setBody(event.target.value);
   };
-  
+
   //
   const sendemail = () => {
     // e.preventDefault();
@@ -37,8 +37,8 @@ function Contact() {
     }
 
     if (nombre.length === 0) {
-        setmsg("Name field required");
-        setLoading(false);
+      setmsg("Name field required");
+      setLoading(false);
     }
     else if (!regLetter.test(nombre)) {
       setmsg("Name field requires only letters");
@@ -51,7 +51,7 @@ function Contact() {
     else if (!regEmail.test(email)) {
       setmsg("Please enter a valid email address");
       setLoading(false);
-    } 
+    }
     else if (subject.length === 0) {
       setmsg("Subject field requires only letters");
       setLoading(false);
@@ -62,48 +62,53 @@ function Contact() {
     }
     else {
       // https://serverportafolio.cleverapps.io/sendemail
-    axios.post("http://localhost:3001/sendemail", data)
+      axios.post("http://localhost:3001/sendemail", data)
 
-    .then(res => {
-      console.log(res.data)
-      setNombre("");
-      setEmail("");
-      setSubject("");
-      setBody("");
-      setmsg("");
-      setLoading(false);
-      setSuccesful(true);
+        .then(res => {
+          console.log(res.data)
+          setNombre("");
+          setEmail("");
+          setSubject("");
+          setBody("");
+          setmsg("");
+          setLoading(false);
+          setSuccesful(true);
 
-    })
-    .catch(err => {
-      console.log(err);
-      setmsg("Error in network")
-      setLoading(false);
-    })
-  }
+        })
+        .catch(err => {
+          console.log(err);
+          setmsg("Error in network")
+          setLoading(false);
+        })
+    }
   }
   //
 
   // useEffect(() => {
 
 
-    
+
   // }, [])
 
   return (
     <div id="contact" className="contact-div">
-        <h1>Contact me!</h1>
-        <SpinnerCircular size={100} thickness={100} speed={100} color="rgba(21, 193, 225, 1)" secondaryColor="rgba(255, 255, 255, 1)" />
-        {loading ?
-        <div className="main-loading">
-        <SpinnerCircular size={100} thickness={100} speed={100} color="rgba(21, 193, 225, 1)" secondaryColor="rgba(255, 255, 255, 1)" />
-        </div> : null}
-        
+      <h1>Contact me!</h1>
+
+      {loading ?
+
+        <div className="shader">
+          <div className="loadingContainer">
+            <SpinnerCircular size={80} thickness={100} speed={100} color="rgba(21, 193, 225, 1)" secondaryColor="rgba(255, 255, 255, 1)" />
+          </div>
+        </div>
+
+        : null}
+
       <div className="contact-div-fields">
 
-          
+
         <div className="contact-fields-row">
-          
+
           <FormField
             type="text"
             standard="labeleffect"
@@ -125,7 +130,7 @@ function Contact() {
 
         </div>
         <div className="contact-field">
-        <FormField
+          <FormField
             type="text"
             standard="labeleffect"
             value={subject}
@@ -136,18 +141,18 @@ function Contact() {
           />
         </div>
         <h4>Purpose</h4>
-        <div className="contact-textarea"> 
-        <textarea value={body} onChange={onChangeHandler} rows="10" cols="20"></textarea>
+        <div className="contact-textarea">
+          <textarea value={body} onChange={onChangeHandler} rows="10" cols="20"></textarea>
         </div>
         <div className="msg-div">
-        <span> {msg} </span>
-        {isSuccesful ? <Popup/> : null}
+          <span> {msg} </span>
+          {isSuccesful ? <Popup /> : null}
         </div>
         <div className="send-button-form">
-        <AwesomeButton onPress={() =>  sendemail() } type="primary" >Send</AwesomeButton>
+          <AwesomeButton onPress={() => sendemail()} type="primary" >Send</AwesomeButton>
         </div>
       </div>
-      
+
     </div>
   );
 }
