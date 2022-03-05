@@ -1,4 +1,5 @@
 import react, { useState, useEffect } from "react";
+import {useNavigate} from "react-router-dom";
 import Popup from "./Popup";
 import { FormField } from "react-form-input-fields";
 import { AwesomeButton } from "react-awesome-button";
@@ -16,6 +17,7 @@ function Contact() {
   let [msg, setmsg] = useState("");
   let [isSuccesful, setSuccesful] = useState(false);
   let [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const onChangeHandler = event => {
     setBody(event.target.value);
@@ -73,7 +75,8 @@ function Contact() {
           setmsg("");
           setLoading(false);
           setSuccesful(true);
-
+          navigate("/");
+          
         })
         .catch(err => {
           console.log(err);
