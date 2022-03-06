@@ -3,9 +3,9 @@
   src: local("Slab"), url(../Assets/fonts/RobotoSlab-Regular.ttf);
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 body {
   margin: 0;
@@ -351,7 +351,7 @@ textarea {
   margin: auto;
 }
 
-.main-loading {
+/* .main-loading {
   background-color: #000000;
   opacity: 50%;
   z-index: 9;
@@ -368,7 +368,7 @@ textarea {
   justify-content: center;
   align-items: center;
 
-}
+} */
 
 .higfive-div {
   display: flex;

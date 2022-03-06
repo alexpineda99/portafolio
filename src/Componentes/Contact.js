@@ -26,6 +26,9 @@ function Contact() {
   //
   const sendemail = () => {
     setLoading(true);
+    if (isSuccesful) {
+      setSuccesful(false);
+    }
     let regLetter = /^[a-zA-Z\s]*$/; // regular expression only letters
     let regEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/; // regular expression email
 
@@ -63,7 +66,7 @@ function Contact() {
     }
     else {
       // https://serverportafolio.cleverapps.io/sendemail
-      axios.post("http://localhost:3001/sendemail", data)
+      axios.post("https://serverportafolio.cleverapps.io/sendemail", data)
 
         .then(res => {
           console.log(res.data)
@@ -74,7 +77,7 @@ function Contact() {
           setmsg("");
           setLoading(false);
           setSuccesful(true);
-          navigate("/");
+          // navigate("/");
           
         })
         .catch(err => {
@@ -84,19 +87,15 @@ function Contact() {
         })
     }
   }
-  //
 
   useEffect(() => {
-
-    if (isSuccesful) {
-      setSuccesful(false)
-    }
-
+    window.scrollTo(0, 0)
   }, [])
 
   return (
     <div id="contact" className="contact-div">
       <h1>Contact me!</h1>
+
 
       {loading ?
 
