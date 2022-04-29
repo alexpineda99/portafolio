@@ -1,8 +1,17 @@
+import React, { useState, useEffect } from 'react';
+import axios from "axios";
 import "../Css/index.css";
 import Fortnitepage from "../Assets/img/work/fortnitepage.PNG";
 import Swinguapage from "../Assets/img/work/swinguapage.PNG";
 
 function Experience() {
+
+  useEffect(() => {
+
+    // axios.get("")
+
+  }, [])
+
   return (
     <div className="experience-main-div">
       <div className="second-title">My work experience</div>
