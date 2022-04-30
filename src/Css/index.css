@@ -54,6 +54,10 @@ p {
   margin-block-end: 0;
 }
 
+.glitch {
+  font-weight: 700;
+}
+
 .principal-text-line2 {
   margin-left: 10%;
 }
@@ -107,7 +111,7 @@ p {
   align-items: center;
   background: #29c1e1;
   border-radius: 50px;
-  font-size: 20px;
+  font-size: 1.2rem;
   width: 50%;
   height: 100%;
   animation: wipe-enter;
@@ -127,6 +131,16 @@ p {
   height: 200px;
   border-radius: 5%;
   transition: ease-in-out 0.2s;
+
+  border-radius: 
+  42% 56% 72% 28% / 42% 42% 56% 48%;
+
+  background: #8f44fd
+  url("https://www.xtrafondos.com/wallpapers/resoluciones/19/montanas-3d-low-poly_1280x720_3454.jpg");
+  background-size: cover;
+  background-position: center;
+
+  animation: morph 3.75s linear infinite;
 }
 
 .experience-img:hover {
@@ -229,6 +243,39 @@ p {
   margin-left: 25%;
   margin-right: 25%;
   margin-top: 2%;
+}
+
+/* blob img and animation  */
+
+.blob {
+  overflow: hidden;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 
+  42% 56% 72% 28% / 42% 42% 56% 48%;
+
+  /* background: #8f44fd
+  url("https://www.xtrafondos.com/wallpapers/resoluciones/19/montanas-3d-low-poly_1280x720_3454.jpg"); */
+  background-size: cover;
+  background-position: center;
+
+  animation: morph 3.75s linear infinite;
+}
+
+@keyframes morph {
+  0%, 100%{
+    border-radius: 
+    42% 56% 72% 28% / 42% 42% 56% 48%;
+  }
+  33% {
+    border-radius: 
+    72% 28% 48% 48% / 28% 28% 72% 72%;
+  }
+
+  66% {
+    border-radius: 
+    100% 56% 56% 100% / 100% 100% 56% 56%;
+  }
 }
 
 .achieve-div {

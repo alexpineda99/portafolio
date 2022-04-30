@@ -11,7 +11,7 @@ function Home() {
   return (
     <div className="main">
       <Nav />
-      <div className="principal">
+      <div className="principal glitch">
         <div className="principal-1">
           <p className="principal-text-line1"> Hi </p>
           <p className="principal-text-line2"> I am </p>
@@ -21,7 +21,7 @@ function Home() {
           <img src={Mehey} alt="Greetings" className="bit-img" />
         </div>
       </div>
-      <div className="second-title">Full Stack Web Developer</div>
+      <div className="second-title glitch">Full Stack Web Developer</div>
       <PersonalInfo/>
       <Experience/>
       <Achievements/>
