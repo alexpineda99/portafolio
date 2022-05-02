@@ -7,6 +7,7 @@
   scroll-behavior: smooth;
 } */
 
+
 body {
   margin: 0;
   padding: 0;
@@ -18,10 +19,12 @@ body {
 .main {
   min-height: 100vh;
   width: 100%;
+  background-color: #FBFAF5;
+  color: #181A18;
 }
 
 .main-personalinfo {
-  margin-top: 10%;
+
 }
 
 .letra-principal {
@@ -41,8 +44,7 @@ nav {
   background-color: #fff !important;
 }
 
-.second-title,
-.personalinfo-title {
+.second-title{
   display: flex;
   justify-content: center;
   width: 100%;
@@ -55,7 +57,33 @@ p {
 }
 
 .glitch {
+  position: relative;
   font-weight: 700;
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, .75),
+    -0.025em -0.05em 0 rgba(0, 255, 0, .75),
+    0.025em 0.05em 0 rgba(0, 0, 255, .75);
+
+    animation: glitch 500ms infinite;
+}
+
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch span:first-child {
+  animation: glitch 650ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-0.05em, -0.025em);
+  opacity: 0.8;
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+  transform: translate(0.02em, 0.025em);
+  opacity: 0.8;
 }
 
 .principal-text-line2 {
@@ -70,9 +98,42 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
   width: 100%;
   height: 200px;
+}
+
+.info-div {
+display: inline-flex;
+margin: 5% 0 5%;
+}
+
+.main-principalinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personalinfo-title {
+  display: flex;
+  font-size: 3rem;
+}
+
+.introduction-div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.personal-img {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.me-img {
+  border-radius: 5rem;
+  width: 40%;
 }
 
 .principal-1,
@@ -105,15 +166,13 @@ p {
 }
 
 .principal-info {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  background: #29c1e1;
-  border-radius: 50px;
+  /* background: #29c1e1; */
+  border: #29c1e1 .35rem solid;
+  border-radius: 1rem;
+  text-align: center;
+  /* box-shadow: #a5a5a5; */
   font-size: 1.2rem;
   width: 50%;
-  height: 100%;
   animation: wipe-enter;
 }
 
@@ -123,7 +182,7 @@ p {
   margin-top: 1%;
   margin-bottom: 1%;
   text-align: center;
-  color: #000;
+  color: #181A18;
 }
 
 .experience-img {
@@ -132,11 +191,10 @@ p {
   border-radius: 5%;
   transition: ease-in-out 0.2s;
 
-  border-radius: 
-  42% 56% 72% 28% / 42% 42% 56% 48%;
+  border-radius:
+    42% 56% 72% 28% / 42% 42% 56% 48%;
 
-  background: #8f44fd
-  url("https://www.xtrafondos.com/wallpapers/resoluciones/19/montanas-3d-low-poly_1280x720_3454.jpg");
+  /* background: #8f44fd url("https://www.xtrafondos.com/wallpapers/resoluciones/19/montanas-3d-low-poly_1280x720_3454.jpg"); */
   background-size: cover;
   background-position: center;
 
@@ -144,17 +202,13 @@ p {
 }
 
 .experience-img:hover {
-  transform: scale(120%);
+  transform: scale(105%);
 }
 
 .bit-img {
   width: 200px;
   height: 200px;
   border-radius: 50px;
-}
-
-.text-personalinfo {
-  text-align: center;
 }
 
 .skill-div {
@@ -171,12 +225,13 @@ p {
 /* animation */
 
 @keyframes wipe-enter {
-	0% {
-		transform: scale(0, .50);
-	}
-	50% {
-		transform: scale(1, .50);
-	}
+  0% {
+    transform: scale(0, .50);
+  }
+
+  50% {
+    transform: scale(1, .50);
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -187,9 +242,89 @@ p {
   }
 }
 
+/* see glitch text example https://codepen.io/cipherbeta/pen/YLdVjw */
+
+@keyframes glitch {
+
+  /* 0% {
+    text-shadow: 0.05em 0 0 rgba(41, 193, 225, .75),
+      -0.05em -0.025em 0 rgba(255, 255, 255, .75),
+      0.025em 0.05em 0 rgba(41, 193, 225, .75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(41, 193, 225, .75),
+      -0.05em -0.025em 0 rgba(255, 255, 255, .75),
+      0.025em 0.05em 0 rgba(41, 193, 225, .75);
+  }
+  15% {
+    text-shadow: 0.05em 0 0 rgba(41, 193, 225, .75),
+      -0.05em -0.025em 0 rgba(255, 255, 255, .75),
+      0.025em 0.05em 0 rgba(41, 193, 225, .75);
+  }
+  49% {
+    text-shadow: 0.05em 0 0 rgba(41, 193, 225, .75),
+      -0.05em -0.025em 0 rgba(255, 255, 255, .75),
+      0.025em 0.05em 0 rgba(41, 193, 225, .75);
+  }
+
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(41, 193, 225, .75),
+      -0.05em 0 0 rgba(255, 255, 255, .75),
+      0 -0.05em 0 rgba(41, 193, 225, .75);
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 rgba(41, 193, 225, .75),
+      -0.05em 0 0 rgba(255, 255, 255, .75),
+      0 -0.05em 0 rgba(41, 193, 225, .75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(41, 193, 225, .75),
+      -0.025em -0.025em 0 rgba(255, 255, 255, .75),
+      -0.025em -0.05em 0 rgba(41, 193, 225, .75);
+  } */
+
+  /* con blanco */
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 255, 255, .75),
+      -0.05em -0.025em 0 rgba(255, 255, 255, .75),
+      0.025em 0.05em 0 rgba(255, 255, 255, .75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 255, 255, .75),
+      -0.05em -0.025em 0 rgba(255, 255, 255, .75),
+      0.025em 0.05em 0 rgba(255, 255, 255, .75);
+  }
+  15% {
+    text-shadow: 0.05em 0 0 rgba(255, 255, 255, .75),
+      -0.05em -0.025em 0 rgba(255, 255, 255, .75),
+      0.025em 0.05em 0 rgba(255, 255, 255, .75);
+  }
+  49% {
+    text-shadow: 0.05em 0 0 rgba(255, 255, 255, .75),
+      -0.05em -0.025em 0 rgba(255, 255, 255, .75),
+      0.025em 0.05em 0 rgba(255, 255, 255, .75);
+  }
+
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 255, 255, .75),
+      -0.05em 0 0 rgba(255, 255, 255, .75),
+      0 -0.05em 0 rgba(255, 255, 255, .75);
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 255, 255, .75),
+      -0.05em 0 0 rgba(255, 255, 255, .75),
+      0 -0.05em 0 rgba(255, 255, 255, .75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 255, 255, .75),
+      -0.025em -0.025em 0 rgba(255, 255, 255, .75),
+      -0.025em -0.05em 0 rgba(255, 255, 255, .75);
+  }
+}
+
 /* end animation  */
 
-.experience-div > a {
+.experience-div>a {
   margin-bottom: 3%;
 }
 
@@ -211,7 +346,7 @@ p {
 .title-skills-div {
   text-align: center;
   fill: white;
-  stroke: #000;
+  stroke: #181A18;
   stroke-width: 3px;
 }
 
@@ -229,8 +364,7 @@ p {
   padding-top: 0 !important;
 }
 
-.src-UserCard-UserCardBody-styles-module__user-card-body--1Ox5y
-  .src-UserCard-UserCardBody-styles-module__user-card-name--x7M0V {
+.src-UserCard-UserCardBody-styles-module__user-card-body--1Ox5y .src-UserCard-UserCardBody-styles-module__user-card-name--x7M0V {
   margin-bottom: 0 !important;
 }
 
@@ -251,8 +385,8 @@ p {
   overflow: hidden;
   width: 16rem;
   height: 16rem;
-  border-radius: 
-  42% 56% 72% 28% / 42% 42% 56% 48%;
+  border-radius:
+    42% 56% 72% 28% / 42% 42% 56% 48%;
 
   /* background: #8f44fd
   url("https://www.xtrafondos.com/wallpapers/resoluciones/19/montanas-3d-low-poly_1280x720_3454.jpg"); */
@@ -263,18 +397,21 @@ p {
 }
 
 @keyframes morph {
-  0%, 100%{
-    border-radius: 
-    42% 56% 72% 28% / 42% 42% 56% 48%;
+
+  0%,
+  100% {
+    border-radius:
+      42% 56% 72% 28% / 42% 42% 56% 48%;
   }
+
   33% {
-    border-radius: 
-    72% 28% 48% 48% / 28% 28% 72% 72%;
+    border-radius:
+      72% 28% 48% 48% / 28% 28% 72% 72%;
   }
 
   66% {
-    border-radius: 
-    100% 56% 56% 100% / 100% 100% 56% 56%;
+    border-radius:
+      100% 56% 56% 100% / 100% 100% 56% 56%;
   }
 }
 
@@ -304,12 +441,12 @@ p {
   align-items: center;
 }
 
-.cv-div > span > a:link {
+.cv-div>span>a:link {
   color: red;
 }
 
 /* visited link */
-.cv-div > span > a:visited {
+.cv-div>span>a:visited {
   color: #e43a3a;
 }
 
@@ -338,7 +475,8 @@ p {
   justify-content: flex-start;
 }
 
-._1twP4, ._2eBPT {
+._1twP4,
+._2eBPT {
   width: 40%;
 }
 
@@ -380,15 +518,18 @@ textarea {
 .shader {
   width: 100%;
   height: 100%;
-  background-color: #000; /** change it to this background-color: rgba(0, 0, 0, 0.65) **/
+  background-color: #181A18;
+  /** change it to this background-color: rgba(0, 0, 0, 0.65) **/
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   position: fixed;
-  opacity: 0.5; /** you can remove this **/
+  opacity: 0.5;
+  /** you can remove this **/
   z-index: 1000000;
 }
+
 .loadingContainer {
   display: flex;
   justify-content: center;
@@ -468,17 +609,30 @@ textarea {
     width: 51%;
     margin-bottom: 5%;
   }
+
+  .personal-img, .introduction-div {
+    width: 100%;
+  }
+
+  .info-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .principal-info {
     border-radius: 30px;
   }
 
-  .contact-field > ._1twP4, ._2eBPT {
+  .contact-field>._1twP4,
+  ._2eBPT {
     width: 100%;
-}
+  }
 
-.contact-fields-row > ._1twP4, ._2eBPT {
-  width: 40%;
-}
+  .contact-fields-row>._1twP4,
+  ._2eBPT {
+    width: 40%;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -486,8 +640,7 @@ textarea {
     flex-direction: column;
   }
 
-  .second-title,
-  .personalinfo-title {
+  .second-title {
     font-size: 20px;
   }
 
@@ -534,11 +687,11 @@ textarea {
 
   .footer-item {
     width: 100%;
-}
+  }
 
-.aws-btn--visible {
-  width: 50% !important;
-}
+  .aws-btn--visible {
+    width: 50% !important;
+  }
 }
 
 /* Palette color  */

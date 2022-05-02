@@ -13,15 +13,15 @@ function Home() {
       <Nav />
       <div className="principal glitch">
         <div className="principal-1">
-          <p className="principal-text-line1"> Hi </p>
-          <p className="principal-text-line2"> I am </p>
-          <p className="principal-text-line3"> Alex </p>
+          <p className="principal-text-line1 glitch"> <span aria-hidden="true">Hi</span> Hi <span aria-hidden="true">Hi</span> </p>
+          <p className="principal-text-line2 glitch"> <span aria-hidden="true">I am</span> I am <span aria-hidden="true">I am</span> </p>
+          <p className="principal-text-line3 glitch"> <span aria-hidden="true">Alex</span> Alex <span aria-hidden="true">Alex</span> </p>
         </div>
         <div className="principal-2">
           <img src={Mehey} alt="Greetings" className="bit-img" />
         </div>
       </div>
-      <div className="second-title glitch">Full Stack Web Developer</div>
+      <div className="second-title"> <p className="glitch">  <span aria-hidden="true">Full Stack Web Developer</span> Full Stack Web Developer <span aria-hidden="true">Full Stack Web Developer</span> </p> </div>
       <PersonalInfo/>
       <Experience/>
       <Achievements/>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../Css/index.css";
+import me from "../Assets/img/me.PNG";
 
 function PersonalInfo() {
 
@@ -26,17 +27,19 @@ function PersonalInfo() {
 
   return (
     <div className="main-personalinfo">
-      <span className="personalinfo-title"> Who i am?</span>
-
-      <div className="principal">
-        <div className="principal-info">
-          <div>
-            <p className="text-personalinfo">
-              I am Alexandro Pineda, a software Engineering who loves coding
-              with a big coffee cup and listening to music. Always encouraged to
-              learn about new programming web technologies. Enthusiast,
-              motivated and passionate.
-            </p>
+      <div className="info-div">
+      <div className="personal-img"><img src={me} className="me-img" /> </div>
+      <div className="introduction-div">
+      <div className="main-principalinfo">
+          {/* <div className=""> */}
+            <span className="personalinfo-title"> Who am i?</span>
+              <p className="text-personalinfo principal-info">
+                I am Alexandro Pineda, a software Engineering who loves coding
+                with a big coffee cup and listening to music. Always encouraged to
+                learn about new programming web technologies. Enthusiast,
+                motivated and passionate.
+              </p>
+          {/* </div> */}
           </div>
         </div>
       </div>
