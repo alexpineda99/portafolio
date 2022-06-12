@@ -27,6 +27,28 @@ body {
 
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 100px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .letra-principal {
   width: 100%;
   height: 50px;
@@ -115,6 +137,7 @@ margin: 5% 0 5%;
 
 .personalinfo-title {
   display: flex;
+  justify-content: center;
   font-size: 3rem;
 }
 
@@ -165,15 +188,48 @@ margin: 5% 0 5%;
   align-items: flex-start;
 }
 
+.corners {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.top, .bottom {
+  position: absolute;
+  width: 5%;
+  height: 5%;
+  pointer-events: none;
+}
+
+.top {
+  top: 0;
+  border-top: .3rem solid #29c1e1;
+}
+
+.bottom {
+  bottom: 0;
+  border-bottom: .3rem solid #29c1e1;
+}
+
+.left {
+  left: 0;
+  border-left: .3rem solid #29c1e1;
+}
+
+.right {
+  right: 0;
+  border-right: .3rem solid #29c1e1;
+}
+
 .principal-info {
   /* background: #29c1e1; */
-  border: #29c1e1 .35rem solid;
+  /* border: #29c1e1 .35rem solid; */
   border-radius: 1rem;
   text-align: center;
   /* box-shadow: #a5a5a5; */
   font-size: 1.2rem;
   width: 50%;
-  animation: wipe-enter;
+  /* animation: wipe-enter; */
 }
 
 .frontend-skills-div,
@@ -184,6 +240,8 @@ margin: 5% 0 5%;
   text-align: center;
   color: #181A18;
 }
+
+/* blob morphing css */
 
 .experience-img {
   width: 100%;
@@ -208,7 +266,7 @@ margin: 5% 0 5%;
 .bit-img {
   width: 200px;
   height: 200px;
-  border-radius: 50px;
+  border-radius: 3rem;
 }
 
 .skill-div {
@@ -641,7 +699,7 @@ textarea {
   }
 
   .second-title {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .principal-1 {
