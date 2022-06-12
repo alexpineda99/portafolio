@@ -65,7 +65,7 @@ function Contact() {
       setLoading(false);
     }
     else {
-      //https://serverportafolio.cleverapps.io/sendemail
+      // https://serverportafolio.cleverapps.io/sendemail
       axios.post("https://portafolioalex.herokuapp.com/sendemail", data)
 
         .then(res => {
