@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../Css/index.css";
 import me from "../Assets/img/me.PNG";
+import goat from "../Assets/img/bitmoji- goat.png";
 
 function PersonalInfo() {
 
@@ -30,19 +31,19 @@ function PersonalInfo() {
       <div className="info-div">
         <div className="personal-img"><img src={me} className="me-img" /> </div>
         <div className="introduction-div">
-            <div className="corners">
+          <div className="corners">
             <div class="top left"></div>
             <div class="top right"></div>
             <div class="bottom right"></div>
             <div class="bottom left"></div>
             <p className="text-personalinfo principal-info">
-            <span className="personalinfo-title"> Who am i?</span>
+              <span className="personalinfo-title"> Who am i?</span>
               I am Alexandro Pineda, a software Engineering who loves coding
               with a big coffee cup and listening to music. Always encouraged to
               learn about new programming web technologies. Enthusiast,
               motivated and passionate.
             </p>
-            </div>
+          </div>
         </div>
       </div>
       <div className="title-skills-div">
@@ -89,6 +90,10 @@ function PersonalInfo() {
           </div>
         </div>
       </div>
+      <div className="goat-div">
+        <img src={goat} className="goat-img" />
+      </div>
+
     </div>
   );
 }
