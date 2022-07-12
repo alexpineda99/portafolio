@@ -428,6 +428,7 @@ p {
   fill: white;
   stroke: #181A18;
   stroke-width: 3px;
+  margin: 5% 0 5%;
 }
 
 /* cards */
@@ -505,7 +506,7 @@ p {
 }
 
 .tittle-achieve {
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .cv-div {
@@ -699,6 +700,10 @@ textarea {
     width: 17rem;
   }
 
+  .goat-div {
+    padding: 15% 0% 15%;
+  }
+
   .info-div {
     display: flex;
     flex-direction: column;
@@ -754,6 +759,7 @@ textarea {
 
   .principal-info {
     width: 90%;
+    padding: 5% 0% 5%;
   }
 
   .letra-principal {
