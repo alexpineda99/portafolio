@@ -9,8 +9,8 @@ function PersonalInfo() {
   const [classSkillDiv, setClassSkillDiv] = useState(null)
   const handleScroll = () => {
     const position = window.pageYOffset;
-    setScrollPosition(position);
-    console.log(position)
+    // setScrollPosition(position);
+    // console.log(position);
     // if (position >= 250) {
     //   setClassSkillDiv("open-div");
     // }else if (position <= 250) {

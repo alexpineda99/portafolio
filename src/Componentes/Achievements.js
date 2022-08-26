@@ -1,15 +1,60 @@
 import "../Css/index.css";
 import "react-dropdown-now/style.css";
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useCallback} from "react";
 import { Dropdown, Selection } from "react-dropdown-now";
-import CvSpanish from "../Assets/cvs/AP CV - Español.pdf";
-import CvEnglish from "../Assets/cvs/AP CV - English.pdf";
+import JSConfetti from "js-confetti"
+import CvSpanish from "../Assets/cvs/Alexandro Pineda - Español CV.pdf";
+import CvEnglish from "../Assets/cvs/Alexandro Pineda - English CV.pdf";
 import ThumbsUp from "../Assets/img/bitmoji-20211123015036.png"
 
 function Achievements() {
 
   let [language, setLanguage] = useState("Spanish");
-  let [cv, setCv] = useState(CvSpanish)
+  let [cv, setCv] = useState(CvSpanish);
+  const [y, setY] = useState(window.scrollY);
+  const [classSkillDiv, setClassSkillDiv] = useState(null);
+  const jsConfetti = new JSConfetti();
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    console.log(position)
+    if (position == 800 && 810) {
+      // setClassSkillDiv("open-div");
+      // alert("jaja");
+
+    }
+    // else if (position <= 250) {
+    //   // setClassSkillDiv(null);
+    //   // alert("menos de 250");
+    // }
+  }
+
+  const handleNavigation = useCallback(
+    (e) => {
+      const window = e.currentTarget;
+      console.log(window.scrollY);
+      if (window.scrollY >= 1300 && window.scrollY <= 1300) {
+        console.log("scrolling up");
+        jsConfetti.addConfetti({
+          confettiColors: [
+            '#29C1E1', "#29C1E1"
+          ],
+          confettiNumber: 70
+        });
+      } 
+      else if (window.scrollY >= 1400 && window.scrollY <= 1400) {
+        console.log("scrolling down");
+        jsConfetti.addConfetti({
+          confettiColors: [
+            '#29C1E1', "#29C1E1"
+          ],
+          confettiNumber: 30
+        });
+      }
+      // setY(window.scrollY);
+    },
+    [y]
+  );
+
 
   function handleLanguage(value) {
     console.log(value.label)
@@ -23,13 +68,14 @@ function Achievements() {
     
   }
 
-
-
   useEffect(() => {
+    setY(window.scrollY);
+    window.addEventListener("scroll", handleNavigation);
 
-
-    
-  }, [language, cv])
+    return () => {
+      window.removeEventListener("scroll", handleNavigation);
+    };
+  }, [language, cv, handleNavigation]);
 
   return (
     <div className="achievements-main-div">
@@ -87,7 +133,7 @@ function Achievements() {
 
       <div className="cv-div">
         <span>
-          <a href={cv}> Download my CV here </a>{" "}
+          <a href={cv} target="_blank"> Download my CV here </a>{" "}
         </span>
         <div>
           <Dropdown
