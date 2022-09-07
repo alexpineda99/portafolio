@@ -47,6 +47,20 @@ body {
   background: #555;
 }
 
+.seperator {
+  height: 25px;
+  background-color: #FBFAF5;
+  border-top-left-radius: 6000px 250px;
+  border-top-right-radius: 6000px 250px;
+  top: -17px;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+}
+
 .letra-principal {
   width: 100%;
   height: 50px;
@@ -215,25 +229,25 @@ p {
 
 .top {
   top: 0;
-  border-top: .3rem solid #29c1e1;
+  border-top: .3rem solid #0099ff;
   border-radius: 20%;
 }
 
 .bottom {
   bottom: 0;
-  border-bottom: .3rem solid #29c1e1;
+  border-bottom: .3rem solid #0099ff;
   border-radius: 20%;
 }
 
 .left {
   left: 0;
-  border-left: .3rem solid #29c1e1;
+  border-left: .3rem solid #0099ff;
   border-radius: 20%;
 }
 
 .right {
   right: 0;
-  border-right: .3rem solid #29c1e1;
+  border-right: .3rem solid #0099ff;
   border-radius: 20%;
 }
 
@@ -292,7 +306,7 @@ p {
   justify-content: space-evenly;
   width: 100%;
   height: 100%;
-  background: #29c1e1;
+  background: #0099ff;
   padding-top: 2%;
   padding-bottom: 2%;
 }
@@ -449,14 +463,18 @@ p {
   margin-bottom: 0 !important;
 }
 
+.achievements-main-div{
+  margin-top: 5%;
+}
+
 .achievements {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   /* border: #29c1e1 1px solid; */
-  width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
   margin-top: 2%;
 }
 
@@ -500,7 +518,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: #29c1e1 3px solid;
+  border: #0099ff 3px solid;
   border-radius: 15px;
   margin-bottom: 5%;
 }
@@ -796,4 +814,7 @@ textarea {
 D4D4D4
 EDECEC
 29C1E1 
+
+optional
+0099ff
 */
