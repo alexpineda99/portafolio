@@ -21,7 +21,7 @@ function Experience() {
                 <img src={Fortnitepage} className="experience-img" alt="fortnite page" />
             </a>
             <span> Personal project </span>
-            <span> Coded on: ReactJS and NodeJS </span>
+            <span> ReactJS, NodeJS, ExpressJS, JWT </span>
         </div>
         <div className="experience-div">
             <a href="https://swingua.com/ru" target="_blank">
@@ -29,7 +29,7 @@ function Experience() {
             </a>
             <span> Location: USA and Ukraine</span>
             <span> Charge: Frontend Developer</span>
-            <span> 01/2020 - 03/2020  </span>
+            <span> Laravel, VueJS, Bootstrap  </span>
         </div>
       </div>
     </div>
