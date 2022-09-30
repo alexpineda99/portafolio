@@ -66,7 +66,7 @@ function Contact() {
     }
     else {
       // https://portafolioalex.herokuapp.com/sendemail
-      axios.post("http://localhost:3001/sendemail", data)
+      axios.post("https://portafolioalex.herokuapp.com/sendemail", data)
 
         .then(res => {
           console.log(res.data)
