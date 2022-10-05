@@ -86,6 +86,9 @@ function PersonalInfo() {
               <p>Axios</p>
               <p>Redux</p>
               <p>ExpressJS</p>
+              <p>Material UI</p>
+              <p>Open Graph</p>
+              <p>SEO</p>
             </div>
           </div>
         </div>

@@ -3,8 +3,8 @@ import "react-dropdown-now/style.css";
 import React, {useState, useEffect, useCallback} from "react";
 import { Dropdown, Selection } from "react-dropdown-now";
 import JSConfetti from "js-confetti"
-import CvSpanish from "../Assets/cvs/Alexandro Pineda - Español CV.pdf";
-import CvEnglish from "../Assets/cvs/Alexandro Pineda - English CV.pdf";
+import CvSpanish from "../Assets/cvs/Cv Alexandro Pineda - Español.pdf";
+import CvEnglish from "../Assets/cvs/Cv Alexandro Pineda - English.pdf";
 import ThumbsUp from "../Assets/img/bitmoji-20211123015036.png"
 
 function Achievements() {
