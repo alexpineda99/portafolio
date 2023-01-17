@@ -152,7 +152,7 @@ function Achievements() {
             {" "}
             Telnet, S.A.{" "}
           </span>
-          <span className="country-achieve"> Madrid ▪ España </span>
+          <span className="country-achieve"> Maracaibo ▪ Venezuela </span>
           <span className="date-achieve"> 12/2022 - 01/2023 </span>
         </div>
       </div>
