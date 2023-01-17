@@ -107,7 +107,7 @@ function Achievements() {
         <div className="achieve-div">
           <strong className="tittle-achieve">
             {" "}
-            Cisco Certified Network Associate 1{" "}
+            CCNAv6: Introduction to Networks{" "}
           </strong>
           <span className="school-achieve">
             {" "}
@@ -128,6 +128,32 @@ function Achievements() {
           </span>
           <span className="country-achieve"> Madrid ▪ España </span>
           <span className="date-achieve"> 11/2019 </span>
+        </div>
+
+        <div className="achieve-div">
+          <strong className="tittle-achieve">
+            {" "}
+            CCNAv7: Introduction to Networks{" "}
+          </strong>
+          <span className="school-achieve">
+            {" "}
+            Telnet, S.A.{" "}
+          </span>
+          <span className="country-achieve"> Maracaibo ▪ Venezuela </span>
+          <span className="date-achieve"> 10/2022 - 12/2022 </span>
+        </div>
+
+        <div className="achieve-div">
+          <strong className="tittle-achieve">
+            {" "}
+            CCNAv7: Switching, Routing, and Wireless Essentials{" "}
+          </strong>
+          <span className="school-achieve">
+            {" "}
+            Telnet, S.A.{" "}
+          </span>
+          <span className="country-achieve"> Madrid ▪ España </span>
+          <span className="date-achieve"> 12/2022 - 01/2023 </span>
         </div>
       </div>
 
