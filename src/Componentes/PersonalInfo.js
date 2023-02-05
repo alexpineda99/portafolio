@@ -73,7 +73,10 @@ function PersonalInfo() {
             <div className="skills">
               <p>PHP</p>
               <p>NodeJS</p>
+              <p>MongoDB</p>
+              <p>Mongoose</p>
               <p>MySQL</p>
+              <p>ExpressJS</p>
             </div>
           </div>
         </div>
@@ -85,7 +88,6 @@ function PersonalInfo() {
               <p>JWT</p>
               <p>Axios</p>
               <p>Redux</p>
-              <p>ExpressJS</p>
               <p>Material UI</p>
               <p>Open Graph</p>
               <p>SEO</p>
