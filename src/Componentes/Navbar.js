@@ -1,5 +1,5 @@
 import "../Css/index.css";
-import react, { useEffect } from "react";
+import { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -14,15 +14,6 @@ import Letra from "../Assets/img/letra-mayus-azul-25medium.png";
 function Nav() {
   let location = useLocation();
 
-  //   location = {
-  //     pathname:"/",
-  //     hash: "#contact"
-  // }
-
-  function scrollToTestDiv() {
-    const divElement = document.getElementById("contact");
-    divElement.scrollIntoView({ behavior: "smooth" });
-  }
   useEffect(() => {
     if (location.hash) {
       let elem = document.getElementById(location.hash.slice(1));
@@ -39,12 +30,9 @@ function Nav() {
       <Navbar
         fontColor="#000"
         backgroundColor="#FBFAF5"
-        brand={<img className="letra-principal" src={Letra} />}
+        brand={<img className="letra-principal" alt="letter img" src={Letra} />}
         links={[{ text: "Contact me", link: "#contact" }]}
       />
-      {/* <div className="seperator">
-      </div> */}
-      {/* <Navbar links={[{text: "Contact me", link: "#contact"}]}/> */}
       <Routes>
         <Route exact path="/" component={Home} />
         <Route path="/#contact" component={Contact} />

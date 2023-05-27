@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
 import "../Css/index.css";
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';

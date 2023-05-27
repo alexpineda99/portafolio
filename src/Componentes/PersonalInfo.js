@@ -1,35 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import "../Css/index.css";
+import { Box } from "@mui/material";
 import me from "../Assets/img/me.PNG";
 import goat from "../Assets/img/bitmoji- goat.png";
 
 function PersonalInfo() {
 
-  const [scrollPosition, setScrollPosition] = useState(0);
   const [classSkillDiv, setClassSkillDiv] = useState(null)
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    // setScrollPosition(position);
-    // console.log(position);
-    // if (position >= 250) {
-    //   setClassSkillDiv("open-div");
-    // }else if (position <= 250) {
-    //   setClassSkillDiv(null);
-    // }
-  }
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <div className="main-personalinfo">
       <div className="info-div">
-        <div className="personal-img"><img src={me} className="me-img" /> </div>
+        <Box className="personal-img" mt={2} mb={1}><img src={me} className="me-img" /> </Box>
         <div className="introduction-div">
           <div className="corners">
             <div class="top left"></div>
