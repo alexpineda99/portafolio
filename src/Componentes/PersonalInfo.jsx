@@ -1,19 +1,20 @@
 import React, {useState } from "react";
 import "../Css/index.css";
 import { Box } from "@mui/material";
+import { useInView } from "react-intersection-observer";
 import me from "../Assets/img/me.png";
 import goat from "../Assets/img/bitmoji- goat.png";
 
 function PersonalInfo() {
 
   const [classSkillDiv, setClassSkillDiv] = useState(null)
-
+  const { ref: divref, inView: Elementvisible } = useInView();
 
   return (
     <div className="main-personalinfo">
       <div className="info-div">
-        <Box className="personal-img" mt={2} mb={1}><img src={me} className="me-img" /> </Box>
-        <div className="introduction-div">
+        <Box ref={divref} className={`personal-img ${Elementvisible ? "move-right-img" : ""}`}  mt={2} mb={1}><img src={me} className="me-img" /> </Box>
+        <div className={`introduction-div ${Elementvisible ? "move-left-introduction" : ""}`}>
           <div className="corners">
             <div class="top left"></div>
             <div class="top right"></div>

@@ -1,6 +1,7 @@
-import React, { useState} from "react";
+import React, {useEffect} from "react";
 import { useInView } from "react-intersection-observer";
 import { experiences } from "../Assets/Json info/info";
+import JSConfetti from "js-confetti";
 import Box from "@mui/material/Box";
 import Link from '@mui/material/Link';
 import Grid from "@mui/material/Grid";
@@ -8,7 +9,14 @@ import "../Css/index.css";
 
 function Experience() {
 
-  const { ref: divref, inView: Elementvisible } = useInView();
+  const { ref: divref, inView: Elementvisible  } = useInView({triggerOnce: true});
+  const jsConfetti = new JSConfetti();
+
+  
+  useEffect(() => {
+
+    
+  }, [Elementvisible])
 
   return (
     <>

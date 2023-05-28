@@ -11,7 +11,7 @@ function Footer() {
                 <div className="footer-item">Alexandro Pineda
                 <div className="footer-item-socials">
                 <SocialIcon url="https://www.instagram.com/mordecalex/?hl=es" style={{ height: 30, width: 30 }} fgColor="#fff" />
-                <SocialIcon url="https://twitter.com/mordecalex" style={{ height: 30, width: 30 }} fgColor="#fff" />
+                <SocialIcon url="https://twitter.com/xelacedrom" style={{ height: 30, width: 30 }} fgColor="#fff" />
                 <SocialIcon url="alexandropinedam1310@gmail.com" network="email" style={{ height: 30, width: 30 }} fgColor="#fff" />
                 <SocialIcon url="https://t.me/mordecalex" network="telegram" style={{ height: 30, width: 30 }} fgColor="#fff" />
                 <SocialIcon url="https://www.linkedin.com/in/alexandro-pineda-m%C3%A1rmol-16a27a154/" style={{ height: 30, width: 30 }} fgColor="#fff" />

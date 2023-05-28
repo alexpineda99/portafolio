@@ -158,6 +158,45 @@ p {
   justify-content: center;
 }
 
+
+.move-right-img {
+
+  animation: move-right 1.5s;
+
+}
+
+.move-left-introduction {
+
+  animation: move-left 1s;
+
+}
+
+@keyframes move-left {
+  
+  0% {
+    transform: translateX(280px);
+  }
+
+  100%{
+    transform: translateX(0);
+
+  }
+
+}
+
+@keyframes move-right {
+  
+  0% {
+    transform: translateX(-280px);
+  }
+
+  100%{
+    transform: translateX(0);
+  }
+
+}
+
+
 .personal-img {
   display: flex;
   justify-content: center;
@@ -210,6 +249,7 @@ p {
   }
 
 }
+
 
 .work-experience-div {
   width: 100%;

@@ -1,41 +1,18 @@
 import "../Css/index.css";
 import "react-dropdown-now/style.css";
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect} from "react";
 import { Dropdown } from "react-dropdown-now";
-import JSConfetti from "js-confetti";
 import CvSpanish from "../Assets/cvs/Cv Alexandro Pineda - Español.pdf";
 import CvEnglish from "../Assets/cvs/Cv Alexandro Pineda - English.pdf";
 import ThumbsUp from "../Assets/img/bitmoji-20211123015036.png";
+import { useInView } from "react-intersection-observer";
 import { Achievements_info } from "../Assets/Json info/info";
 
 function Achievements() {
   let [language, setLanguage] = useState("Spanish");
   let [cv, setCv] = useState(CvSpanish);
-  const [y, setY] = useState(window.scrollY);
-  const jsConfetti = new JSConfetti();
 
-
-  const handleNavigation = useCallback(
-    (e) => {
-      const window = e.currentTarget;
-      // console.log(window.scrollY);
-      if (window.scrollY >= 1300 && window.scrollY <= 1300) {
-        console.log("scrolling up");
-        jsConfetti.addConfetti({
-          confettiColors: ["#29C1E1", "#29C1E1"],
-          confettiNumber: 70,
-        });
-      } else if (window.scrollY >= 1400 && window.scrollY <= 1400) {
-        console.log("scrolling down");
-        jsConfetti.addConfetti({
-          confettiColors: ["#29C1E1", "#29C1E1"],
-          confettiNumber: 30,
-        });
-      }
-      // setY(window.scrollY);
-    },
-    [y]
-  );
+  const { ref: divref, inView: Elementvisible } = useInView();
 
   function handleLanguage(value) {
     console.log(value.label);
@@ -49,20 +26,17 @@ function Achievements() {
   }
 
   useEffect(() => {
-    setY(window.scrollY);
-    window.addEventListener("scroll", handleNavigation);
 
-    return () => {
-      window.removeEventListener("scroll", handleNavigation);
-    };
-  }, [language, cv, handleNavigation]);
+    
+  }, [language, cv]);
 
   return (
     <div className="achievements-main-div">
       <div className="second-title">My Achievements</div>
       <div className="achievements">
+
         {Achievements_info.map((Achievement, i) => 
-          <div className="achieve-div" key={i}>
+          <div ref={divref} className="achieve-div" key={i}>
             <strong className="tittle-achieve">
               {" "}
               {Achievement.title}  {" "}
@@ -74,6 +48,7 @@ function Achievements() {
             <span className="country-achieve"> {Achievement.place} </span>
             <span className="date-achieve"> {Achievement.date} </span>
           </div>
+
         )}
       </div>
 
@@ -85,6 +60,7 @@ function Achievements() {
           </a>{" "}
         </span>
         <div>
+          {Elementvisible ? "visible" : "Not visible"}
           <Dropdown
             className="dropdown-language"
             placeholder="Select a language"
