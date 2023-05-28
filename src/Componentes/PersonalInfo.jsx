@@ -2,7 +2,7 @@ import React, {useState } from "react";
 import "../Css/index.css";
 import { Box } from "@mui/material";
 import { useInView } from "react-intersection-observer";
-import me from "../Assets/img/me.png";
+import me from "../Assets/img/bitmoji/me.png";
 import goat from "../Assets/img/bitmoji- goat.png";
 
 function PersonalInfo() {
