@@ -14,7 +14,6 @@ function Experience() {
 
   
   useEffect(() => {
-
     
   }, [Elementvisible])
 

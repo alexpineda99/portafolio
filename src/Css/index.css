@@ -158,7 +158,6 @@ p {
   justify-content: center;
 }
 
-
 .move-right-img {
 
   animation: move-right 1.5s;
@@ -579,6 +578,42 @@ p {
   margin-bottom: 5%;
   text-align: center;
 }
+
+.isEven {
+  /* color: #bb2124; */
+  animation: isEven 2s;
+}
+
+.isOdd {
+  /* color: #0099ff; */
+  animation: isOdd 2s;
+}
+
+
+@keyframes isEven {
+  0% {
+    transform: translateX(280px);
+  }
+
+  100%{
+    transform: translateX(0);
+
+  }
+}
+
+@keyframes isOdd {
+
+  0% {
+    transform: translateX(-280px);
+  }
+
+  100%{
+    transform: translateX(0);
+
+  }
+  
+}
+
 
 .tittle-achieve {
   font-size: 1rem;

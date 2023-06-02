@@ -16,10 +16,10 @@ function PersonalInfo() {
         <Box ref={divref} className={`personal-img ${Elementvisible ? "move-right-img" : ""}`}  mt={2} mb={1}><img src={me} className="me-img" /> </Box>
         <div className={`introduction-div ${Elementvisible ? "move-left-introduction" : ""}`}>
           <div className="corners">
-            <div class="top left"></div>
-            <div class="top right"></div>
-            <div class="bottom right"></div>
-            <div class="bottom left"></div>
+            <div className="top left"></div>
+            <div className="top right"></div>
+            <div className="bottom right"></div>
+            <div className="bottom left"></div>
             <p className="text-personalinfo principal-info">
               <span className="personalinfo-title"> Who am i?</span>
               I am Alexandro Pineda, a software Engineering who loves coding

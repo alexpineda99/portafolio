@@ -1,161 +1,153 @@
 import react, { useState, useEffect } from "react";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import Popup from "./Popup";
-import { FormField } from "react-form-input-fields";
-import { AwesomeButton } from "react-awesome-button";
-import { SpinnerCircular } from 'spinners-react';
-import axios from 'axios';
+// import { FormField } from "react-form-input-fields";
+import TextField from '@mui/material/TextField';
+import Button from "@mui/material/Button";
+import SendIcon from "@mui/icons-material/Send";
+import { SpinnerCircular } from "spinners-react";
+import axios from "axios";
 import "react-awesome-button/dist/styles.css";
 import "react-form-input-fields/dist/index.css";
 import "../Css/index.css";
 
 function Contact() {
-  let [nombre, setNombre] = useState("");
-  let [email, setEmail] = useState("");
-  let [subject, setSubject] = useState("");
-  let [body, setBody] = useState("");
   let [msg, setmsg] = useState("");
   let [isSuccesful, setSuccesful] = useState(false);
   let [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const onChangeHandler = event => {
-    setBody(event.target.value);
-  };
-
+  const { register, formState: { errors }, handleSubmit } = useForm();
+  // const onSubmit = data => console.log(data);
   //
-  const sendemail = () => {
+  const sendemail = (data) => {
     setLoading(true);
     if (isSuccesful) {
       setSuccesful(false);
     }
-    let regLetter = /^[a-zA-Z\s]*$/; // regular expression only letters
-    let regEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/; // regular expression email
+    console.log(data);
 
+    // https://portafolioalex.herokuapp.com/sendemail
+    axios
+      .post("https://portafolioalex.herokuapp.com/sendemail", data)
 
-    const data = {
-      nombre: nombre,
-      email: email,
-      subject: subject,
-      body: body
-    }
-
-    if (nombre.length === 0) {
-      setmsg("Name field required");
-      setLoading(false);
-    }
-    else if (!regLetter.test(nombre)) {
-      setmsg("Name field requires only letters");
-      setLoading(false);
-    }
-    else if (email.length === 0) {
-      setmsg("Email field required");
-      setLoading(false);
-    }
-    else if (!regEmail.test(email)) {
-      setmsg("Please enter a valid email address");
-      setLoading(false);
-    }
-    else if (subject.length === 0) {
-      setmsg("Subject field requires only letters");
-      setLoading(false);
-    }
-    else if (!regLetter.test(subject)) {
-      setmsg("Subject field requires only letters");
-      setLoading(false);
-    }
-    else {
-      // https://portafolioalex.herokuapp.com/sendemail
-      axios.post("https://portafolioalex.herokuapp.com/sendemail", data)
-
-        .then(res => {
-          console.log(res.data)
-          setNombre("");
-          setEmail("");
-          setSubject("");
-          setBody("");
-          setmsg("");
-          setLoading(false);
-          setSuccesful(true);
-          // navigate("/");
-          
-        })
-        .catch(err => {
-          console.log(err);
-          setmsg("Error in network")
-          setLoading(false);
-        })
-    }
-  }
+      .then((res) => {
+        setLoading(false);
+        setSuccesful(true);
+        // navigate("/");
+      })
+      .catch((err) => {
+        console.log(err);
+        setmsg("Error in network");
+        setLoading(false);
+      });
+  };
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div id="contact" className="contact-div">
       <h1>Contact me!</h1>
 
-
-      {loading ?
-
+      {loading ? (
         <div className="shader">
           <div className="loadingContainer">
-            <SpinnerCircular size={80} thickness={100} speed={100} color="rgba(21, 193, 225, 1)" secondaryColor="rgba(255, 255, 255, 1)" />
+            <SpinnerCircular
+              size={80}
+              thickness={100}
+              speed={100}
+              color="rgba(21, 193, 225, 1)"
+              secondaryColor="rgba(255, 255, 255, 1)"
+            />
           </div>
         </div>
+      ) : null}
 
-        : null}
-
-      <div className="contact-div-fields">
-
-
+      <form onSubmit={handleSubmit(sendemail)} className="contact-div-fields">
         <div className="contact-fields-row">
-
-          <FormField
+          <TextField
             type="text"
-            standard="labeleffect"
-            value={nombre}
-            keys={"nombre"}
-            effect={"effect_1"}
-            handleOnChange={(value) => setNombre(value)}
+            variant="standard"
+            size="medium"
+            margin="normal"
+            {...register("nombre", {
+              required: {value: true, message: "Name field is required."},
+              maxLength: {value: 30, message: "Name field must be at least 3 characters and no more than 30 characters"},
+              minLength: {value: 3, message: "Name field must be at least 3 characters and no more than 30 characters"},
+              pattern: {value: /^[a-zA-Z\s]*$/, message: "Only letters are valid in this field"},
+            })}
             placeholder={"Enter first name"}
+            helperText={errors.nombre && errors.nombre.message}
+            error={errors.nombre && true}
           />
-          <FormField
+          <TextField
             type="email"
-            standard="labeleffect"
-            value={email}
-            keys={"email"}
-            effect={"effect_1"}
-            handleOnChange={(value) => setEmail(value)}
+            variant="standard"
+            size="medium"
+            margin="normal"
+            {...register("email", {
+              required: {value: true, message: "Email field is required."},
+              pattern: {value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/, message: "Invalid email format"},
+              maxLength: {value: 60, message: "Name field must be at least 3 characters and no more than 30 characters"},
+              minLength: {value: 3, message: "Name field must be at least 3 characters and no more than 30 characters"}
+            })}
             placeholder={"Enter email"}
+            helperText={errors.email && errors.email.message}
+            error={errors.email && true}
           />
-
         </div>
         <div className="contact-field">
-          <FormField
+          <TextField
             type="text"
-            standard="labeleffect"
-            value={subject}
-            keys={"subject"}
-            effect={"effect_1"}
-            handleOnChange={(value) => setSubject(value)}
+            variant="standard"
+            size="medium"
+            margin="normal"
+            {...register("subject", {
+              required: {value: true, message: "Subject field is required."},
+              pattern: {value: /^[a-zA-Z\s]*$/, message: "Only letters are valid in this field"},
+              maxLength: {value: 60, message: "Name field must be at least 3 characters and no more than 60 characters"},
+              minLength: {value: 3, message: "Name field must be at least 3 characters and no more than 30 characters"}
+            })}
             placeholder={"Subject"}
+            helperText={errors.subject && errors.subject.message}
+            error={errors.subject && true}
           />
+
         </div>
         <h4>Purpose</h4>
         <div className="contact-textarea">
-          <textarea value={body} onChange={onChangeHandler} rows="10" cols="20"></textarea>
+          <TextField
+            {...register("body", {
+              required: {value: true, message: "Body field is required."},
+              pattern: {value: /^[a-zA-Z\s]*$/, message: "Only letters are valid in this field"},
+              maxLength: {value: 120, message: "Name field must be at least 3 characters and no more than 60 characters"},
+              minLength: {value: 3, message: "Name field must be at least 3 characters and no more than 30 characters"}
+            })}
+            multiline
+            rows="10"
+            cols="20"
+            helperText={errors.body && errors.body.message}
+            error={errors.body && true}
+          ></TextField>
         </div>
         <div className="msg-div">
-          <span> {msg} </span>
+          {/* <span> {msg} </span> */}
           {isSuccesful ? <Popup /> : null}
         </div>
         <div className="send-button-form">
-          <AwesomeButton onPress={() => sendemail()} type="primary" >Send</AwesomeButton>
+          <Button
+            variant="contained"
+            size="large"
+            type="submit"
+            endIcon={<SendIcon />}
+          >
+            Send
+          </Button>
         </div>
-      </div>
-
+      </form>
     </div>
   );
 }

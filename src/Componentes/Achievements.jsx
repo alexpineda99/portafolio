@@ -12,7 +12,7 @@ function Achievements() {
   let [language, setLanguage] = useState("Spanish");
   let [cv, setCv] = useState(CvSpanish);
 
-  const { ref: divref, inView: Elementvisible } = useInView();
+  const { ref: divref, inView: Elementvisible } = useInView({triggerOnce:true});
 
   function handleLanguage(value) {
     console.log(value.label);
@@ -27,16 +27,17 @@ function Achievements() {
 
   useEffect(() => {
 
-    
-  }, [language, cv]);
+    console.log(Elementvisible)
+
+  }, [language, cv, Elementvisible]);
 
   return (
     <div className="achievements-main-div">
       <div className="second-title">My Achievements</div>
-      <div className="achievements">
+      <div className="achievements" ref={divref}>
 
         {Achievements_info.map((Achievement, i) => 
-          <div ref={divref} className="achieve-div" key={i}>
+          <div className={`achieve-div ${i % 2 === 1 && Elementvisible ? "isEven" : "" } ${i % 2 === 0 && Elementvisible ? "isOdd" : "" }`} key={i}>
             <strong className="tittle-achieve">
               {" "}
               {Achievement.title}  {" "}
