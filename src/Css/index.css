@@ -581,12 +581,12 @@ p {
 
 .isEven {
   /* color: #bb2124; */
-  animation: isEven 2s;
+  /* animation: isEven 2s; */
 }
 
 .isOdd {
   /* color: #0099ff; */
-  animation: isOdd 2s;
+  /* animation: isOdd 2s; */
 }
 
 
