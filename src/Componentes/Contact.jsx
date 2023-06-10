@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
 import { SpinnerCircular } from "spinners-react";
 import axios from "axios";
+import emailjs from "@emailjs/browser";
 import "react-awesome-button/dist/styles.css";
 import "react-form-input-fields/dist/index.css";
 import "../Css/index.css";
@@ -18,23 +19,20 @@ function Contact() {
   let [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const { register, formState: { errors }, handleSubmit } = useForm();
-  // const onSubmit = data => console.log(data);
-  //
+  const { register, reset, formState: { errors }, handleSubmit } = useForm();
+
   const sendemail = (data) => {
     setLoading(true);
     if (isSuccesful) {
       setSuccesful(false);
     }
     console.log(data);
-
-    // https://portafolioalex.herokuapp.com/sendemail
-    axios
-      .post("https://portafolioalex.herokuapp.com/sendemail", data)
-
+    emailjs.send("service_0yyivyy", "template_cxq1iqj", data, "gejnPvSGcWeAzj5Ub")
       .then((res) => {
         setLoading(false);
         setSuccesful(true);
+        console.log(res)
+        reset();
         // navigate("/");
       })
       .catch((err) => {
