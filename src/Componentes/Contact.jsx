@@ -2,12 +2,10 @@ import react, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Popup from "./Popup";
-// import { FormField } from "react-form-input-fields";
 import TextField from '@mui/material/TextField';
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
 import { SpinnerCircular } from "spinners-react";
-import axios from "axios";
 import emailjs from "@emailjs/browser";
 import "react-awesome-button/dist/styles.css";
 import "react-form-input-fields/dist/index.css";
@@ -43,7 +41,7 @@ function Contact() {
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   }, []);
 
   return (

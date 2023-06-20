@@ -656,8 +656,9 @@ p {
 
 .contact-fields-row {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   justify-content: space-between;
+  margin: 1%;
 }
 
 .contact-field {

@@ -61,7 +61,6 @@ function Achievements() {
           </a>{" "}
         </span>
         <div>
-          {Elementvisible ? "visible" : "Not visible"}
           <Dropdown
             className="dropdown-language"
             placeholder="Select a language"
