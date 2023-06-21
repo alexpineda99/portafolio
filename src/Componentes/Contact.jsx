@@ -94,8 +94,8 @@ function Contact() {
             helperText={errors.email && errors.email.message}
             error={errors.email && true}
           />
-        </div>
-        <div className="contact-field">
+
+        {/* <div className="contact-field"> */}
           <TextField
             type="text"
             variant="standard"
@@ -111,8 +111,8 @@ function Contact() {
             helperText={errors.subject && errors.subject.message}
             error={errors.subject && true}
           />
-
         </div>
+        {/* </div> */}
         <h4>Purpose</h4>
         <div className="contact-textarea">
           <TextField
