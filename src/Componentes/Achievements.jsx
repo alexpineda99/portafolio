@@ -77,7 +77,7 @@ function Achievements() {
             }
             onOpen={() => console.log("open!")}
           />
-          <LazyLoadImage effect="blur" src={ThumbsUp} alt="Thumbs Up" className="bit-img" />
+          <LazyLoadImage effect="blur" width={"200px"} height={"200px"} src={ThumbsUp} alt="Thumbs Up" className="bit-img" />
           {/* <span class="flag-icon flag-icon-us"><img src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg" /></span> */}
         </div>
       </div>
