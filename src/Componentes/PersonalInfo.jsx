@@ -2,7 +2,8 @@ import React, {useState } from "react";
 import "../Css/index.css";
 import { Box } from "@mui/material";
 import { useInView } from "react-intersection-observer";
-import me from "../Assets/img/bitmoji/me.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import me from "../Assets/img/me.png";
 import goat from "../Assets/img/bitmoji- goat.png";
 
 function PersonalInfo() {
@@ -13,7 +14,7 @@ function PersonalInfo() {
   return (
     <div className="main-personalinfo">
       <div className="info-div">
-        <Box ref={divref} className={`personal-img ${Elementvisible ? "move-right-img" : ""}`}  mt={2} mb={1}><img src={me} className="me-img" /> </Box>
+        <Box ref={divref} className={`personal-img ${Elementvisible ? "move-right-img" : ""}`}  mt={2} mb={1}><img  src={me} className="me-img" /> </Box>
         <div className={`introduction-div ${Elementvisible ? "move-left-introduction" : ""}`}>
           <div className="corners">
             <div className="top left"></div>
@@ -22,7 +23,7 @@ function PersonalInfo() {
             <div className="bottom left"></div>
             <p className="text-personalinfo principal-info">
               <span className="personalinfo-title"> Who am i?</span>
-              I am Alexandro Pineda, a software Engineering who loves coding
+              Junior Full-Stack Web Developer who loves coding
               with a big coffee cup and listening to music. Always encouraged to
               learn about new programming web technologies. Enthusiast,
               motivated and passionate.
@@ -35,7 +36,7 @@ function PersonalInfo() {
       </div>
       <div className={`skill-div ${classSkillDiv}`}>
         <div className="frontend-skills-div">
-          <img src="https://img.icons8.com/ios/50/000000/design--v1.png" alt="Monitor image" />
+          <LazyLoadImage effect="blur" src="https://img.icons8.com/ios/50/000000/design--v1.png" alt="Monitor image" />
           <div className="main-skill-div">
             <span className="skills-title"> Frontend Skills </span>
             <div className="skills">
@@ -50,7 +51,7 @@ function PersonalInfo() {
           </div>
         </div>
         <div className="backend-skills-div">
-          <img src="https://img.icons8.com/ios/50/000000/database.png" alt="Database image" />
+          <LazyLoadImage effect="blur" src="https://img.icons8.com/ios/50/000000/database.png" alt="Database image" />
           <div className="main-skill-div">
             {" "}
             <span className="skills-title"> Backend Skills </span>
@@ -65,7 +66,7 @@ function PersonalInfo() {
           </div>
         </div>
         <div className="additional-skills-div">
-          <img src="https://img.icons8.com/ios/50/000000/add-bookmark.png" alt="Additional image" />
+          <LazyLoadImage effect="blur" src="https://img.icons8.com/ios/50/000000/add-bookmark.png" alt="Additional image" />
           <div className="main-skill-div">
             <span className="skills-title"> Additional Skills </span>
             <div className="skills">
@@ -80,7 +81,7 @@ function PersonalInfo() {
         </div>
       </div>
       <div className="goat-div">
-        <img src={goat} className="goat-img" />
+        <LazyLoadImage effect="blur" src={goat} className="goat-img" />
       </div>
 
     </div>

@@ -10,6 +10,7 @@ import { Navbar } from "react-responsive-navbar-overlay";
 import Home from "./Home";
 import Contact from "./Contact";
 import Letra from "../Assets/img/letra-mayus-azul-25medium.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Nav() {
   let location = useLocation();
@@ -26,18 +27,18 @@ function Nav() {
   }, [location]);
 
   return (
-    <div>
+    <>
       <Navbar
         fontColor="#000"
         backgroundColor="#FBFAF5"
-        brand={<img className="letra-principal" alt="letter img" src={Letra} />}
+        brand={<LazyLoadImage effect="blur" className="letra-principal" alt="letter img" src={Letra} />}
         links={[{ text: "Contact me", link: "#contact" }]}
       />
       <Routes>
         <Route exact path="/" component={Home} />
         <Route path="/#contact" component={Contact} />
       </Routes>
-    </div>
+    </>
   );
 }
 

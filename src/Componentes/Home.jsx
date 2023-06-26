@@ -6,6 +6,7 @@ import Experience from "./Experience";
 import Achievements from "./Achievements";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Home() {
   return (
@@ -18,7 +19,7 @@ function Home() {
           <p className="principal-text-line3 glitch"> <span aria-hidden="true">Alex</span> Alex <span aria-hidden="true">Alex</span> </p>
         </div>
         <div className="principal-2">
-          <img src={Mehey} alt="Greetings" className="bit-img" />
+          <LazyLoadImage src={Mehey} alt="Greetings" className="bit-img" effect="blur" />
         </div>
       </div>
       <div className="second-title"> <p className="glitch">  <span aria-hidden="true">Full Stack Web Developer</span> Full Stack Web Developer <span aria-hidden="true">Full Stack Web Developer</span> </p> </div>

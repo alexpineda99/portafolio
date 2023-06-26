@@ -5,6 +5,7 @@ import { Dropdown } from "react-dropdown-now";
 import CvSpanish from "../Assets/cvs/Cv Alexandro Pineda - Español.pdf";
 import CvEnglish from "../Assets/cvs/Cv Alexandro Pineda - English.pdf";
 import ThumbsUp from "../Assets/img/bitmoji-20211123015036.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useInView } from "react-intersection-observer";
 import { Achievements_info } from "../Assets/Json info/info";
 
@@ -77,7 +78,7 @@ function Achievements() {
             }
             onOpen={() => console.log("open!")}
           />
-          <img src={ThumbsUp} alt="Thumbs Up" className="bit-img" />
+          <LazyLoadImage effect="blur" src={ThumbsUp} alt="Thumbs Up" className="bit-img" />
           {/* <span class="flag-icon flag-icon-us"><img src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg" /></span> */}
         </div>
       </div>
