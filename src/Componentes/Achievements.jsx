@@ -1,4 +1,3 @@
-import "../Css/index.css";
 import "react-dropdown-now/style.css";
 import React, { useState, useEffect} from "react";
 import { Dropdown } from "react-dropdown-now";

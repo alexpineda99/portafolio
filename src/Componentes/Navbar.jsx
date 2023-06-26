@@ -1,4 +1,3 @@
-import "../Css/index.css";
 import { useEffect } from "react";
 import {
   BrowserRouter as Router,
@@ -9,7 +8,7 @@ import {
 import { Navbar } from "react-responsive-navbar-overlay";
 import Home from "./Home";
 import Contact from "./Contact";
-import Letra from "../Assets/img/letra-mayus-azul-25medium.png";
+import Letra from "../Assets/img/letra-mayus-azul-25medium.webp";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Nav() {

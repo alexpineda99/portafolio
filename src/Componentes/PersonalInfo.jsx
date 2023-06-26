@@ -1,9 +1,9 @@
 import React, {useState } from "react";
-import "../Css/index.css";
 import { Box } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import me from "../Assets/img/me.png";
+import Grid from '@mui/material/Grid';
+import me from "../Assets/img/me.webp";
 import goat from "../Assets/img/bitmoji- goat.png";
 
 function PersonalInfo() {
@@ -80,9 +80,9 @@ function PersonalInfo() {
           </div>
         </div>
       </div>
-      <div className="goat-div">
-        <LazyLoadImage effect="blur" src={goat} className="goat-img" />
-      </div>
+      <Box sx={{width: "100%", display: "flex", justifyContent: "center", textAlign: "center"}} mt={10} mb={10} >
+        <LazyLoadImage effect="blur" className="goat-img" src={goat} />
+      </Box>
 
     </div>
   );

@@ -6,7 +6,6 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
-import "../Css/index.css";
 
 function Experience() {
   const { ref: divref, inView: Elementvisible } = useInView({

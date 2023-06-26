@@ -9,7 +9,6 @@ import { SpinnerCircular } from "spinners-react";
 import emailjs from "@emailjs/browser";
 import "react-awesome-button/dist/styles.css";
 import "react-form-input-fields/dist/index.css";
-import "../Css/index.css";
 
 function Contact() {
   let [msg, setmsg] = useState("");
